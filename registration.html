@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration</title>
+</head>
+<body>
+	<input type="text" name="name" id="name">
+	<select id="gender">
+		<option value="">--</option>
+		<option value="male">M</option>
+		<option value="female">F</option>
+	</select>
+	<input type="text" name="email" id="email">
+	<input type="text" name="mobile" id="mobile">
+	<hr>
+	<h1 id="dName">NAME</h1>
+	<h2 id="dGender">GENDER</h2>
+	<h3 id="dEmail">EMAIL</h3>
+	<h4 id="dMobile">MOBILE</h4>
+	<hr>
+	<button onclick="showName()">NAME</button>
+	<button onclick="showGender()">GENDER</button>
+	<button onclick="showEmail()">EMAIL</button>
+	<button onclick="showMobile()">MOBILE</button>
+	<button onclick="resetForm()">RESET FORM</button>
+	<button onclick="resetDisplay()">RESET DISPLAY</button>
+	<script type="text/javascript">
+		function showName() {
+			var n=document.getElementById("name")
+            var ni=n.value 
+            var heding=document.getElementById("dName")
+            heding.innerText=n.value 
+		}
+
+		function showGender() {
+            var g=document.getElementById("gender")
+            var gi=g.value 
+            var heding1=document.getElementById("dGender")
+            heding1.innerText=g.value 
+			
+		}
+
+		function showEmail() {
+            var e=document.getElementById("email")
+            var em=e.value 
+            var heding2=document.getElementById("dEmail")
+            heding2.innerText=e.value 
+			
+			
+		}
+
+		function showMobile() {
+            var m=document.getElementById("mobile")
+            var mn=m.value 
+            var heding3=document.getElementById("dMobile")
+            heding3.innerText=m.value 
+			
+			
+		}
+
+		function resetForm() {
+			var inp=document.getElementById('name')
+            inp.value=""
+			var inpg=document.getElementById('gender')
+            inpg.value=""
+            var inpm=document.getElementById('mobile')
+            inpm.value=""
+            var inpem=document.getElementById('email')
+            inpem.value=""
+            
+		}
+
+		function resetDisplay() {
+			var inP=document.getElementById('dName')
+            inP.innerText="NAME"
+            var inpG=document.getElementById('dGender')
+            inpG.innerText="GENDER"
+            var inpM=document.getElementById('dMobile')
+            inpM.innerText="MOBILE"
+            var inmeM=document.getElementById('dEmail')
+            inmeM.innerText="EMAIL"
+            
+		}
+	</script>
+</body>
+</html>
